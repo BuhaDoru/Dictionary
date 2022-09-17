@@ -3,11 +3,13 @@
     <script> 
       let dictionary = [];
       let displayText = document.getElementById("displayText");
+
       function addWords() {
         dictionary[dictionary.length] = document.getElementById("addWord").value.toUpperCase();
         displayText.innerHTML = "This word has been added to the dictionary";
         document.getElementById("display").appendChild(displayText);
       }
+
       function search() {
         const word = document.getElementById("Word").value.toUpperCase();
         if (dictionary.indexOf(word) > -1) {
@@ -18,6 +20,7 @@
            document.getElementById("display").appendChild(displayText);
         }
       }
+
       function restart() {
           location.reload();
       }
